@@ -17,27 +17,27 @@
 
 После получения запроса сервис, в свою очередь, запрашивает с публичного API (англоязычные вопросы для викторин) https://jservice.io/api/random?count=1 указанное в полученном запросе количество вопросов.
 <hr>
-[
-{
-"id": 43439,
-"answer": "\"Clair de Lune\"",
-"question": "This \"moonlit\" Debussy piece, dropped from \"Fantasia\" 1940, appears on the \"Fantasia Anthology\" DVD",
-"value": 500,
-"airdate": "2001-04-03T12:00:00.000Z",
-"created_at": "2014-02-11T23:11:58.092Z",
-"updated_at": "2014-02-11T23:11:58.092Z",
-"category_id": 5349,
-"game_id": null,
-"invalid_count": null,
-"category": {
-"id": 5349,
-"title": "music in fantasia",
-"created_at": "2014-02-11T23:11:57.516Z",
-"updated_at": "2014-02-11T23:11:57.516Z",
-"clues_count": 5
-}
-}
-]
+[<br>
+{<br>
+"id": 43439,<br>
+"answer": "\"Clair de Lune\"",<br>
+"question": "This \"moonlit\" Debussy piece, dropped from \"Fantasia\" 1940, appears on the \"Fantasia Anthology\" DVD",<br>
+"value": 500,<br>
+"airdate": "2001-04-03T12:00:00.000Z",<br>
+"created_at": "2014-02-11T23:11:58.092Z",<br>
+"updated_at": "2014-02-11T23:11:58.092Z",<br>
+"category_id": 5349,<br>
+"game_id": null,<br>
+"invalid_count": null,<br>
+"category": {<br>
+"id": 5349,<br>
+"title": "music in fantasia",<br>
+"created_at": "2014-02-11T23:11:57.516Z",<br>
+"updated_at": "2014-02-11T23:11:57.516Z",<br>
+"clues_count": 5<br>
+}<br>
+}<br>
+]<br>
 <hr>
 Далее, полученные ответы должны сохраняться в базе данных из п. 1, причем сохранена должна быть как минимум следующая информация (название колонок и типы данный можете выбрать сами, также можете добавлять свои колонки): 1. ID вопроса, 2. Текст вопроса, 3. Текст ответа, 4. - Дата создания вопроса. В случае, если в БД имеется такой же вопрос, к публичному API с викторинами должны выполняться дополнительные запросы до тех пор, пока не будет получен уникальный вопрос для викторины.
 Ответом на запрос из п.2.a должен быть предыдущей сохранённый вопрос для викторины. В случае его отсутствия - пустой объект.
